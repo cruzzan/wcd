@@ -20,10 +20,8 @@ jobs:
           yarn install --dev
           yarn run build release
 
-      - uses: "diillson/auto-release@latest"
+      - name: "Create release"
+        uses: fnkr/github-action-ghr@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          files: |
-            LICENSE
-            wcd.tar.gz
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GHR_PATH: wcd.tar.gz

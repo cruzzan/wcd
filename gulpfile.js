@@ -13,9 +13,10 @@ function packRelease() {
         {
             gzip: true,
             cwd: 'site',
+            follow: true,
             file: 'wcd.tar.gz'
         },
-        ['index.html', 'dist']
+        ['index.html', 'dist', 'LICENCE']
     )
 }
 
