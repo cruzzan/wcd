@@ -1,2 +1,3 @@
-# wcd
-West Coast Dev - Home page
+#West Coast Dev - [Home page](https://www.westcoast.dev)
+
+
