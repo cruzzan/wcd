@@ -17,6 +17,7 @@ jobs:
 
       - name: "Build & pack"
         run: |
+          yarn install --dev
           yarn run build release
 
       - uses: "diillson/auto-release@latest"
