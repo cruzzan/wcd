@@ -1,10 +1,10 @@
 const { watch, series, src, dest } = require("gulp");
-const sass = require("gulp-scss")
+const sass = require('gulp-sass')(require('sass'))
 const tar = require("tar")
 
 function buildCss () {
     return src('site/assets/sass/main.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(dest('site/dist/css'))
 }
 

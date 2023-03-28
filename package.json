@@ -9,7 +9,8 @@
   "private": false,
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-scss": "^1.4.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.60.0",
     "tar": "^6.1.13"
   },
   "scripts": {
