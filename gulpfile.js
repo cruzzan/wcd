@@ -8,8 +8,8 @@ function buildCss () {
         .pipe(dest('site/dist/css'))
 }
 
-async function packRelease() {
-    tar.c(
+function packRelease() {
+    return tar.c(
         {
             gzip: true,
             cwd: 'site',
@@ -19,15 +19,11 @@ async function packRelease() {
     )
 }
 
-async function build() {
-    buildCss()
-}
-
 function defaultWatch() {
-    build()
+    buildCss()
     watch('site/assets/sass/main.scss', buildCss)
 }
 
-exports.build = build
-exports.release = series(build, packRelease)
+exports.build = buildCss
+exports.release = series(buildCss, packRelease)
 exports.default = defaultWatch
