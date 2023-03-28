@@ -1,0 +1,17 @@
+{
+  "name": "wcd",
+  "version": "1.0.0",
+  "description": "WCD homepage",
+  "main": "index.html",
+  "repository": "git@github.com:cruzzan/wcd.git",
+  "author": "sebastian@westcoast.dev",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-scss": "^1.4.0"
+  },
+  "scripts": {
+    "build": "node_modules/gulp/bin/gulp.js"
+  }
+}
