@@ -1,3 +1,3 @@
-#West Coast Dev - [Home page](https://www.westcoast.dev)
+# West Coast Dev - [Home page](https://www.westcoast.dev)
 
 
