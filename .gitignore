@@ -1,0 +1,9 @@
+# Gulp
+.gulp-scss-cache
+.sass-cache
+
+# Idea
+.idea
+
+# Build assets
+dist/
