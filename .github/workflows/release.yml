@@ -22,6 +22,6 @@ jobs:
 
       - name: "Create release"
         uses: fnkr/github-action-ghr@v1
-        with:
+        env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           GHR_PATH: wcd.tar.gz
