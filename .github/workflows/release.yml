@@ -1,0 +1,25 @@
+---
+name: "tagged-release"
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  tagged-release:
+    name: "Tagged release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: "Build & pack"
+        run: |
+          yarn run build release
+
+      - uses: "diillson/auto-release@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+            files: |
+              LICENSE
+              wcd.tar.gz
